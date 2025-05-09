@@ -1,5 +1,6 @@
 package src.com.bantishaw.calculator;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SimpleCalculator {
@@ -37,6 +38,8 @@ public class SimpleCalculator {
                     System.out.println("Please enter valid input");
                     break;
             }
+        }catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
         }
     }
 }

@@ -1,5 +1,6 @@
 package src.com.bantishaw.numbergame;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -30,6 +31,8 @@ public class NumberGuessGame {
                     System.out.println(" :( Try again, my number was "+ systemGuess);
                 }
             }
+        }catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
         }
     }
 }

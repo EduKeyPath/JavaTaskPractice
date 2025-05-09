@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -93,6 +94,8 @@ public class ToDoList {
                         break;
                 }
             }
+        }catch (InputMismatchException e) {
+            System.out.println("Invalid input!");
         }
     }
 }
