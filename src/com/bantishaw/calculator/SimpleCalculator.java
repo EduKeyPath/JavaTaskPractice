@@ -1,4 +1,4 @@
-package JavaTaskPractice;
+package src.com.bantishaw.calculator;
 
 import java.util.Scanner;
 
