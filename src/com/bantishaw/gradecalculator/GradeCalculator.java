@@ -22,7 +22,7 @@ public class GradeCalculator {
                 }
                 totalMarks += marks;
             }
-            float avgMarks = totalMarks/numSubjects;
+            int avgMarks = totalMarks/numSubjects;
             char grade;
             if (avgMarks > 90) grade = 'A';
             else if(avgMarks > 80 && avgMarks < 90) grade = 'B';
@@ -30,7 +30,7 @@ public class GradeCalculator {
             else if(avgMarks > 40 && avgMarks < 60) grade = 'D';
             else grade = 'F';
             System.out.println("Total Marks: " + totalMarks);
-            System.out.println("Average Marks: " + avgMarks);
+            System.out.println("Average Marks: " + avgMarks + '%');
             System.out.println("Grade: " + grade);
             userInput.close();
         }catch(InputMismatchException e){
