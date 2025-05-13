@@ -67,6 +67,7 @@ public class LibraryBookTracker {
         for(LibraryBook book:libBook){
             if(book.getName().toLowerCase().contains(bookWant) || book.getAuthor().toLowerCase().contains(bookWant)){
                 found = true;
+                System.out.println(book);
                 System.out.println("** Book exist in our library **");
             }
         }
@@ -75,7 +76,7 @@ public class LibraryBookTracker {
 
     public void borrowBook(){
         System.out.println("Enter ISBN to borrow the book?");
-        String isbn = userInput.nextLine().toLowerCase();
+        String isbn = userInput.nextLine();
         for(LibraryBook book:libBook){
             if(book.getIsbn().equals(isbn)){
                 if(book.getBorrowStatus()){
@@ -91,7 +92,7 @@ public class LibraryBookTracker {
 
     public void returnBook(){
         System.out.println("Enter ISBN to return the book.");
-        String isbn = userInput.nextLine().toLowerCase();
+        String isbn = userInput.nextLine();
         for(LibraryBook book:libBook){
             if(book.getIsbn().equals(isbn)){
                 if(book.getBorrowStatus()){
